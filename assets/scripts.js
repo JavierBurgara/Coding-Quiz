@@ -63,3 +63,64 @@ var questions = [
      },
 ]
 
+// if back button is hit on high score page
+     var renderStartPage = function () {
+          containerHighScoresEl.classList.add("hide")
+          containerHighScoresEl.classList.remove("show")
+          containerHighScoresEl.classList.remove("show")
+          containerStartEl.classList.remove("hide")
+          containerStartEl.classList.add("show")
+          containerScoreEl.removeChild(containerScoreEl.lastChild)
+          questionIndex = 0
+          gameover = ""
+          timerEl.textContent = 0 
+          score = 0
+
+     if (correctEl.className = "show") {
+      correctEl.classList.remove("show");
+      correctEl.classList.add("hide")
+     }
+     if (wrongEl.className = "show") {
+          wrongEl.classList.remove("show");
+          wrongEl.classList.add("hide");
+     }
+     }
+
+     //every second, check if game-over is true, or if there is time left.
+     var setTime = function () {
+          timeleft = 60;
+
+          var timercheck = setInterval(function() {
+               timerEl.innerText = timeleft;
+               timeleft--
+             
+               if (gameover) {
+                   clearInterval(timercheck)
+               }
+              
+               if (timeleft < 0) {
+                   showScore()
+                   timerEl.innerText = 0
+                   clearInterval(timercheck)
+               }
+             
+               }, 1000)
+
+     }
+
+     var startGame = function() {
+          //add classes to show/hide start and quiz screen
+          containerStartEl.classList.add('hide');
+          containerStartEl.classList.remove('show');
+          containerQuestionEl.classList.remove('hide');
+          containerQuestionEl.classList.add('show');
+          //Shuffle the questions so they show in random order
+          allQuestions = questions.sort(() => Math.random() - 0.5)
+          setTime()
+          setQuestion()
+        }
+
+        var setQuestion = function() {
+          resetAnswers()
+          displayQuestion(arrayShuffledQuestions[QuestionIndex])
+        }
