@@ -14,3 +14,4 @@ N/A
 # Link to website
 https://javierburgara.github.io/Coding-Quiz/
 # Deployed Image of Website
+![Coding-Quiz](https://github.com/JavierBurgara/Coding-Quiz/assets/135621096/5baded8e-d7d2-4245-a3b1-48601715ceb0)
