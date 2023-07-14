@@ -6,12 +6,12 @@
     --primary: #0a0808c5;
     --secondary: #0f0f0f;
     --tertiary: rgb(14, 13, 13);
-    --white: rgb(255, 11, 11);
+    --red: rgb(247, 18, 18);
     font-size: 62.5%;
   }
 
   body {
-    background: #fc0303;
+    background: #fffdfd;
     color: var(--secondary);
     margin: 0;
     padding: 0;
@@ -120,7 +120,7 @@
   /*Button Styling */
   .btn {
       background: var(--secondary);
-      color: var(--white);
+      color: var(--red);
       padding: 10px;
       border-radius: 10px;
       border: none;
